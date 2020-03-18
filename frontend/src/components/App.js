@@ -9,6 +9,7 @@ import Dashboard from './todos/Dashboard'; // added
 
 import { Provider } from 'react-redux'; // added
 import store from '../store'; // added
+import TodoEdit from './todos/TodoEdit';
 
 class App extends Component {
   render() {
@@ -19,9 +20,9 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={Dashboard} />
             <Route exact path='/delete/:id' component={TodoDelete} />
+            <Route exact path='/edit/:id' component={TodoEdit} /> 
           </Switch>
         </Router>
-        <Header />
       </Provider>
     );
   }
